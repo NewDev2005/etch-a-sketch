@@ -16,9 +16,9 @@
     text-decoration: none;
     border: none;
 }
-/* body{
-    background-color: rgba(179, 161, 214, 0.842);
-} */
+body{
+    background-color: rgba(162, 154, 177, 0.842);
+}
 #container{
     display: flex;
     border-color: none; 
@@ -27,8 +27,8 @@
     flex-wrap: wrap;
    margin-left: 85px;
    margin-right: auto;
-   border: 1px solid rgb(255, 0, 0);
-   
+   border: none;
+   background-color: white;
    
 }
 
@@ -37,7 +37,7 @@
     flex-direction: column;
     width: calc(100% / 64);
     height: calc(100% / 64);
-    border: 1px solid black;
+    border-color: none;
     
 
     
