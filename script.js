@@ -1,6 +1,6 @@
 const container = document.querySelector('#container');
 const gridButton = document.querySelector('.button-one');
-const colorBtn = document.querySelector('.button-two');
+const clearBtn = document.querySelector('.button-two');
 
 
 function divs(){
@@ -20,16 +20,21 @@ function newGrid(){
         container.removeChild(container.firstChild);
     }
     createGrid(newSize);
-    styleNewGrid();
+    styleNewGrid(newSize);
     });
-    
 }
 
-function styleNewGrid(){
+
+function styleNewGrid(value){
    const parent = document.querySelector("#main-container"); 
-   const container = parent.querySelector("#container").getElementsByClassName('.child-div');
-   container.style.setProperty = ('width', 'calc(100% / 32)');
-   container.style.setProperty = ('height', 'calc100% / 32');
+   const container = parent.querySelector("#container");
+   const babyDivs = container.getElementsByClassName("child-div");
+
+   for(let i=0; i<babyDivs.length; i++){
+    babyDivs[i].style.setProperty('width', `calc(100% / ${value})`);
+    babyDivs[i].style.setProperty('height', `calc(100% / ${value})`);
+   }
+
 }
 
 function createGrid(num){
