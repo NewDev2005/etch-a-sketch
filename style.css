@@ -1,9 +1,29 @@
 * {
     box-sizing: border-box;
 }
+
 #main-container{
     display: flex;
     justify-content: center;
+}
+#heading{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: auto;
+   height: auto;
+   margin-top: -18px;
+   margin-left: -7px;
+   margin-right: -7px;
+   
+
+}
+.para{
+    font-size: 19px;
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    padding: 25px;
 }
 #button-container{
     display: flex;
@@ -17,7 +37,7 @@
     border: none;
 }
 body{
-    background-color: rgba(162, 154, 177, 0.842);
+    background-color: rgba(186, 164, 196, 0.993);
 }
 #container{
     display: flex;
@@ -38,7 +58,27 @@ body{
     width: calc(100% / 32);
     height: calc(100% / 32);
     border-color: none;
-    
-
-    
 }
+.button-one, .button-two{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* background-color: rgba(0, 136, 247, 0.952); */
+    background-color: #2f46ca;;
+    color: white;
+    padding: 10px;
+    border-radius: 17px;;
+    transition-duration: 100ms;
+}
+ 
+.eraser, .sketch-btn{
+    background: none;
+    border: none;
+    display: inline-block;
+    outline: none;
+    font-size: 39px;
+    transition-duration: 90ms;
+}
+.eraser:hover, .sketch-btn:hover, .button-one:hover, .button-two:hover{
+    transform: scale(1.2);
+}
+
