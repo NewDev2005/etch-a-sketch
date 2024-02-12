@@ -52,12 +52,28 @@ function whiteGrid(){
         }
     }
 
-
 function eraser(){
     const eraseBtn = document.querySelector(".eraser");
 
     eraseBtn.addEventListener("click", () => {
         whiteGrid();
+    });
+}
+
+function ColorBackToRandom(){
+    const childContainer = document.querySelector("#container");
+    const containerElement = childContainer.getElementsByClassName("child-div");
+    for(let i=0; i<containerElement.length; i++){
+        containerElement[i].addEventListener("mouseover", (event) => {
+            event.target.style.backgroundColor = randomColor();
+        });
+    }
+}
+
+function sketchBtn(){
+    const sketchBtn = document.querySelector(".sketch-btn");
+    sketchBtn.addEventListener("click", () => {
+        ColorBackToRandom();
     });
 }
 
@@ -98,3 +114,4 @@ function randomColor(){
  newGrid();
 refreshPage();
 eraser();
+sketchBtn();
