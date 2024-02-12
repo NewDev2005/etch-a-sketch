@@ -35,8 +35,8 @@ body{
 .child-div{
     display: flex;
     flex-direction: column;
-    width: calc(100% / 64);
-    height: calc(100% / 64);
+    width: calc(100% / 32);
+    height: calc(100% / 32);
     border-color: none;
     
 
