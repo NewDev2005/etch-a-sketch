@@ -1,6 +1,5 @@
 const container = document.querySelector('#container');
 const gridButton = document.querySelector('.button-one');
-const clearBtn = document.querySelector('.button-two');
 
 
 function divs(){
@@ -24,6 +23,12 @@ function newGrid(){
     });
 }
 
+function refreshPage(){
+    const clearBtn = document.querySelector(".button-two");
+    clearBtn.addEventListener("click", () => {
+        location.reload();
+    });
+}
 
 function styleNewGrid(value){
    const parent = document.querySelector("#main-container"); 
@@ -34,7 +39,26 @@ function styleNewGrid(value){
     babyDivs[i].style.setProperty('width', `calc(100% / ${value})`);
     babyDivs[i].style.setProperty('height', `calc(100% / ${value})`);
    }
+}
 
+function whiteGrid(){
+    const parentContainer = document.querySelector("#main-container");
+    const childContainer = parentContainer.querySelector("#container");
+    const containerElement = childContainer.getElementsByClassName("child-div");
+        for(let i=0; i<containerElement.length; i++){
+        containerElement[i].addEventListener("mouseover", (event) => {
+                event.target.style.backgroundColor = "white";
+            });
+        }
+    }
+
+
+function eraser(){
+    const eraseBtn = document.querySelector(".eraser");
+
+    eraseBtn.addEventListener("click", () => {
+        whiteGrid();
+    });
 }
 
 function createGrid(num){
@@ -70,5 +94,7 @@ function randomColor(){
     }
     return color;
 }
- createGrid(64);
+ createGrid(32);
  newGrid();
+refreshPage();
+eraser();
